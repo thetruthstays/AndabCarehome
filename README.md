@@ -1,6 +1,6 @@
 # Andab Care – Website Project
 
-A clean static website for **Andab Care Medical Center**, Westerville, OH.
+A clean static website for **Andab Care Medical Center**
 
 ---
 
