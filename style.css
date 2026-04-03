@@ -864,14 +864,18 @@ a {
   background: #fff;
   border-radius: 18px;
   padding: 40px;
-  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.09), 0 2px 12px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 8px 48px rgba(0, 0, 0, 0.09),
+    0 2px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #eef3f3;
 }
 .contact-info-panel {
   background: #fff;
   border-radius: 18px;
   padding: 40px;
-  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.09), 0 2px 12px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 8px 48px rgba(0, 0, 0, 0.09),
+    0 2px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #eef3f3;
 }
 .form-group {
@@ -1068,7 +1072,10 @@ footer {
   border-radius: 50%;
   color: #b0cccc;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 .social-pill svg {
   width: 18px;
@@ -1110,7 +1117,9 @@ footer {
   height: 2.5px;
   background: var(--text);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   transform-origin: center;
 }
 .hamburger.open .ham-line:nth-child(1) {
@@ -1133,6 +1142,11 @@ footer {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.35s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 998;
 }
 .mobile-nav.open {
   max-height: 600px;
@@ -1146,7 +1160,9 @@ footer {
   color: #555;
   cursor: pointer;
   border-bottom: 1px solid var(--border);
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .mobile-nav-link:last-child {
   border-bottom: none;
@@ -1172,7 +1188,9 @@ footer {
   font-weight: 600;
   color: #667;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
   border-bottom: 1px solid #eef3f3;
 }
 .mobile-nav-sublink:last-child {

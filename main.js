@@ -84,6 +84,15 @@ function closeMobileMenu() {
   nav.setAttribute("aria-hidden", "true");
 }
 
+/* Close mobile menu when clicking outside */
+document.addEventListener("click", function (event) {
+  const mobileNav = document.getElementById("mobile-nav");
+  const hamburger = document.getElementById("hamburger-btn");
+  if (!mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+    closeMobileMenu();
+  }
+});
+
 /* ── Page Navigation ── */
 let isNavigating = false;
 
@@ -114,7 +123,9 @@ function showPage(name) {
     });
 
     fetch(PAGES[name])
-      .then(function (response) { return response.text(); })
+      .then(function (response) {
+        return response.text();
+      })
       .then(function (html) {
         pageEl.innerHTML = html;
         pageEl.classList.add("active");
@@ -145,7 +156,9 @@ function showPage(name) {
 
         isNavigating = false;
       })
-      .catch(function () { isNavigating = false; });
+      .catch(function () {
+        isNavigating = false;
+      });
   }
 
   if (currentPage) {
@@ -195,11 +208,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* Navbar scroll-shadow */
   const navbar = document.getElementById("navbar");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 8) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (window.scrollY > 8) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    },
+    { passive: true },
+  );
 });
